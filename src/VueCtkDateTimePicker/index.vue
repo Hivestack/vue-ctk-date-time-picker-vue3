@@ -341,6 +341,9 @@
         if (this.position) {
           return this.position
         } else {
+          if (this.$refs.parent == null) {
+            return 'bottom';
+          }
           const parentRect = this.$refs.parent.getBoundingClientRect()
           const windowHeight = window.innerHeight
           let datePickerHeight = 445
